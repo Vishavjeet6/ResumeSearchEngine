@@ -1,0 +1,59 @@
+<div class="container">
+    <h2>Welcome Admin</h2>
+    <!-- <div class="input-group mb-3">
+        <input type="text" class="form-control"  placeholder="Search here" aria-label="Search here" aria-describedby="button-addon2"
+        [(ngModel)]="search.description"
+        >
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="doSearch()">Button</button>
+        </div>
+    </div> -->
+  
+    <div class="input-group mb-3">
+    <input type="text" class="form-control"  placeholder="Desired Skill" 
+    [(ngModel)]="search.skill"
+    >
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control"  placeholder="Desired Degree" 
+      [(ngModel)]="search.completeDegree"
+    >
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control"  placeholder="University/College"
+      [(ngModel)]="search.completeEducation"
+    >
+    </div>
+      
+    <div class="input-group">
+    <button class="btn btn-primary" type="button" id="button-addon2" (click)="doSearch()">Button</button>
+    </div>
+    
+    
+    <div class="div" *ngIf="results.length > 0" >
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Degree</th>
+            <th scope="col">Skills</th>
+            <th scope="col">Education</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let result of results;" (click)="openPdf(result.id)">
+            <th scope="row">{{result.id}}</th>
+            <td>{{result.userName}}</td>
+            <td>{{result.phoneNumber}}</td>
+            <td>{{result.userName}}</td>
+            <td>{{result.userMail}}</td>
+            <td>{{result.skills.slice(0,5)}}...</td>
+            <td>{{result.completeEducation.slice(0,50)}}...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

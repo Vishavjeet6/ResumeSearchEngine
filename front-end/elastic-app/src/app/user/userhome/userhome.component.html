@@ -1,0 +1,13 @@
+<div class="container">
+    <h2>Welcome User</h2>
+    <form #userForm="ngForm" (ngSubmit)="uploadPdf()">
+        <div>
+            <label for="exampleFormControlFile1">Upload Pdf File</label>
+            <input style="background-color: whitesmoke;" type="file" class="form-control-file" id="exampleFormControlFile1"
+            (change)="fileChangeEvent($event)"
+            >
+        </div>
+        <!-- <button [disabled]="filesToUpload.length == 0" type="submit" class="btn btn-primary">Submit</button> -->
+        <button [disabled]="!fileToUpload" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
