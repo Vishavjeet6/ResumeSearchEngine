@@ -1,5 +1,8 @@
 # PdfSearchEngine
 
+## Documentation
+I will add a detailed documentation and medium article if developers find it useful so hit star if you like it
+
 
 ![Image description](img/1.png)
 ![Image description](img/2.png)
