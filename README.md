@@ -1,6 +1,7 @@
 # PdfSearchEngine
 
 ## Documentation
+Youtube Link - https://youtu.be/YjRWQEY_tMM
 I will add a detailed documentation and medium article if developers find it useful so hit star if you like it
 
 
